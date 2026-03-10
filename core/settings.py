@@ -254,29 +254,102 @@ JAZZMIN_SETTINGS = {
     "site_title": "Autointel Diagnostics Admin",
     "site_header": "Autointel",
     "site_brand": "Autointel",
+    "site_logo": None,
+    "login_logo": None,
+    "login_logo_dark": None,
+    "site_logo_classes": "img-circle",
+    "site_icon": None,
     "welcome_sign": "Welcome to the Autointel Diagnostics Admin Panel",
     "copyright": "Autointel Diagnostics © 2026",
+    "search_model": ["auth.User", "auth.Group"],
     "user_avatar": None,
+    
+    # Top Menu
+    "topmenu_links": [
+        {"name": "Home",  "url": "admin:index", "permissions": ["auth.view_user"]},
+        {"name": "Support", "url": "https://github.com/farridav/django-jazzmin/issues", "new_window": True},
+        {"model": "auth.User"},
+        {"app": "books"},
+    ],
+    
+    # User Menu
+    "usermenu_links": [
+        {"model": "auth.user"}
+    ],
+    
+    # Side Menu
+    "show_sidebar": True,
+    "navigation_expanded": True,
+    "hide_apps": [],
+    "hide_models": [],
+    "order_with_respect_to": ["auth", "user", "clients", "fleets", "jobs", "notifications"],
+    
+    # Icons
     "icons": {
         "auth": "fas fa-users-cog",
         "auth.user": "fas fa-user",
         "auth.Group": "fas fa-users",
+        "user.User": "fas fa-user",
+        "user.EmployeeProfile": "fas fa-id-card",
+        "user.ManagerProfile": "fas fa-user-tie",
+        "clients.Client": "fas fa-building",
+        "fleets.Vehicle": "fas fa-truck",
+        "fleets.MaintenanceSchedule": "fas fa-calendar-check",
+        "jobs.Job": "fas fa-briefcase",
+        "jobs.JobActivity": "fas fa-tasks",
+        "notifications.Notification": "fas fa-bell",
+        "certificates": "fas fa-certificate",
+        "fleet_inspections": "fas fa-clipboard-check",
+        "safety_forms": "fas fa-shield-alt",
+        "supports": "fas fa-life-ring",
     },
-    "default_icon_parents": "fas fa-chevron-right",
+    "default_icon_parents": "fas fa-chevron-circle-right",
     "default_icon_children": "fas fa-circle",
+    
+    # Related Modal
+    "related_modal_active": False,
+    
+    # UI Customizer
+    "custom_css": None,
+    "custom_js": None,
+    "use_google_fonts_cdn": True,
+    "show_ui_builder": False,
+    
+    "changeform_format": "horizontal_tabs",
+    "changeform_format_overrides": {"auth.user": "collapsible", "auth.group": "vertical_tabs"},
 }
 
 
 JAZZMIN_UI_TWEAKS = {
-    "theme": "lux",
-    "dark_mode_theme": "darkly",
     "navbar_small_text": False,
     "footer_small_text": False,
     "body_small_text": False,
-    "brand_color": "primary",
-    "accent": "primary",
-    "navbar": "navbar-dark bg-primary",
+    "brand_small_text": False,
+    "brand_colour": "navbar-primary",
+    "accent": "accent-primary",
+    "navbar": "navbar-white navbar-light",
     "no_navbar_border": False,
+    "navbar_fixed": False,
+    "layout_boxed": False,
+    "footer_fixed": False,
+    "sidebar_fixed": False,
+    "sidebar": "sidebar-dark-primary",
+    "sidebar_nav_small_text": False,
+    "sidebar_disable_expand": False,
+    "sidebar_nav_child_indent": False,
+    "sidebar_nav_compact_style": False,
+    "sidebar_nav_legacy_style": False,
+    "sidebar_nav_flat_style": False,
+    "theme": "default",
+    "dark_mode_theme": None,
+    "button_classes": {
+        "primary": "btn-primary",
+        "secondary": "btn-secondary",
+        "info": "btn-info",
+        "warning": "btn-warning",
+        "danger": "btn-danger",
+        "success": "btn-success"
+    }
 }
 
 
