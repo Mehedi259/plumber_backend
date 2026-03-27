@@ -237,7 +237,7 @@ SPECTACULAR_SETTINGS = {
     'DESCRIPTION': "API for Adelaide Plumbing and Gasfitting",
     'VERSION': '1.0.1',
     'TERMS_OF_SERVICE': 'https://www.google.com/policies/terms/',
-    'CONTACT': {'email': 'maruf.bshs@gmail.com'},
+    'CONTACT': {'email': 'mmridul207@gmail.com'},
     'LICENSE': {'name': 'BSD License'},
     'SERVE_INCLUDE_SCHEMA': False,
     
